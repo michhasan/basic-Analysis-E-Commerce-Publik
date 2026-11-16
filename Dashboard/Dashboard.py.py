@@ -5,7 +5,7 @@ data_dir = Path("./data")
 data_dir.mkdir(parents=True, exist_ok=True)
 
 print(f"Directory created at: {data_dir.resolve()}")
-print("Please upload 'ecommerce_eda.csv' and 'customer_rfm.csv' into this folder using the Colab file explorer on the left.")
+print("Please upload 'MainData_ecommerce_eda.csv' and 'MainData_customer_rfm.csv' into this folder using the Colab file explorer on the left.")
 
 %%writefile app.py
 from pathlib import Path
