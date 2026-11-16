@@ -7,7 +7,6 @@ data_dir.mkdir(parents=True, exist_ok=True)
 print(f"Directory created at: {data_dir.resolve()}")
 print("Please upload 'MainData_ecommerce_eda.csv' and 'MainData_customer_rfm.csv' into this folder using the Colab file explorer on the left.")
 
-%%writefile app.py
 from pathlib import Path
 import pandas as pd
 import plotly.express as px
