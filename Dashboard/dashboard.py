@@ -11,8 +11,8 @@ DATA_DIR = Path(__file__).resolve().parent / "data"
 
 @st.cache_data
 def load_data():
-    sales = pd.read_csv(DATA_DIR / "ecommerce_eda.csv", parse_dates=["order_purchase_timestamp"])
-    customers = pd.read_csv(DATA_DIR / "customer_rfm.csv")
+    sales = pd.read_csv(DATA_DIR / "MainData_ecommerce_eda.csv", parse_dates=["order_purchase_timestamp"])
+    customers = pd.read_csv(DATA_DIR / "MainData_customer_rfm.csv")
     return sales, customers
 
 
@@ -20,7 +20,7 @@ try:
     sales, rfm = load_data()
 except (FileNotFoundError, ValueError, pd.errors.ParserError) as error:
     st.error(f"Dataset tidak dapat dibaca: {error}")
-    st.info("Simpan ecommerce_eda.csv dan customer_rfm.csv di folder dashboard/data/.")
+    st.info("Simpan MainData_ecommerce_eda.csv dan MainData_customer_rfm.csv di folder dashboard/data/.")
     st.stop()
 
 sales_columns = {"order_id", "customer_unique_id", "order_purchase_timestamp", "price", "product_category_name_english"}
