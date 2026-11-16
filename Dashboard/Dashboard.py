@@ -16,7 +16,7 @@ st.set_page_config(page_title="Olist E-Commerce Dashboard", page_icon="📊", la
 
 
 # Membaca data relatif dari folder tempat app.py berada
-DATA_DIR = Path(__file__).resolve().parent / "data"
+DATA_DIR = Path(__file__).resolve().parent
 
 @st.cache_data
 def load_data():
