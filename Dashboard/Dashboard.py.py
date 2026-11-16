@@ -18,7 +18,7 @@ st.set_page_config(page_title="Olist E-Commerce Dashboard", page_icon="📊", la
 # Membaca data relatif dari folder tempat app.py berada
 DATA_DIR = Path(__file__).resolve().parent / "data"
 
- @st.cache_data
+ @St.cache_data
  def load_data():
      sales = pd.read_csv(DATA_DIR / "MainData_ecommerce_eda.csv", parse_dates=["order_purchase_timestamp"])
      customers = pd.read_csv(DATA_DIR / "MainData_customer_rfm.csv")
